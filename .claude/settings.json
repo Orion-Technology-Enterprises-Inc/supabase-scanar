@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(supabase --version)",
+      "Bash(npx supabase *)",
+      "Bash(psql postgresql://postgres:postgres@127.0.0.1:54322/postgres -c \"SELECT version\\(\\);\")",
+      "Bash(psql postgresql://postgres:postgres@127.0.0.1:54322/postgres -c \"SELECT name, default_version FROM pg_available_extensions WHERE name IN \\('moddatetime','uuid-ossp','pg_trgm','btree_gin','pgcrypto','vector'\\) ORDER BY name;\")",
+      "Bash(ipconfig getifaddr *)"
+    ]
+  }
+}

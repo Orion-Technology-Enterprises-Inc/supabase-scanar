@@ -1,0 +1,11 @@
+ALTER TABLE aisles
+  ADD COLUMN IF NOT EXISTS corners jsonb,
+  DROP COLUMN IF EXISTS position,
+  DROP COLUMN IF EXISTS rotation,
+  DROP COLUMN IF EXISTS scale;
+
+ALTER TABLE shelves
+  DROP COLUMN IF EXISTS rotation;
+
+ALTER TABLE bins
+  DROP COLUMN IF EXISTS rotation;
